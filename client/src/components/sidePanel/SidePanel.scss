@@ -1,4 +1,56 @@
 .side-panel {
   background-color: var(--color-neutral-gray);
   height: 100%;
+  position: relative;
+  .company-icon {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    text-align-last: center;
+  }
+  .side-panel-footer {
+    display: flex;
+    height: 315px;
+    position: absolute;
+    bottom: 0;
+    .pose-image {
+      display: flex;
+      align-items: flex-end;
+    }
+    .footer-wrapper {
+      display: flex;
+      flex-direction: column;
+      place-content: space-between;
+      margin-right: var(--s-m);
+      .footer-upper-block {
+        .title {
+          font-family: var(--main-font);
+          font-style: normal;
+          font-weight: 700;
+          font-size: var(--fs-k);
+          line-height: var(--s-l);
+          color: var(--color-white);
+          margin-bottom: var(--s-s);
+        }
+        .sub-title {
+          font-family: var(--main-font);
+          font-style: normal;
+          font-weight: 400;
+          font-size: var(--fs-b);
+          line-height: var(--s-l);
+          color: var(--color-white);
+          margin-bottom: var(--s-xl);
+        }
+      }
+      .footer-contact-block {
+        font-family: var(--main-font);
+        font-style: normal;
+        font-weight: 400;
+        font-size: var(--fs-b);
+        line-height: var(--s-j);
+        color: var(--color-white);
+        margin-bottom: var(--s-m);
+      }
+    }
+  }
 }

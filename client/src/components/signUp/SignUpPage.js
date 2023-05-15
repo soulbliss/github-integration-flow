@@ -6,10 +6,10 @@ const SignUpPage = () => {
   return (
     <div className="sign-up-page">
       <Row className="sign-up-page-wrapper">
-        <Col className="side-panel-holder" span={8}>
+        <Col className="side-panel-holder" span={9}>
           <SidePanel />
         </Col>
-        <Col span={8}>
+        <Col span={15}>
           <div>I am signUpPage</div>
         </Col>
       </Row>

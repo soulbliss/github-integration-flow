@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-
 :root {
   // SPACING
   --s-xxxl: 128px;
@@ -8,6 +7,7 @@
   --s-xl: 48px;
   --s-l: 32px;
   --s-m: 24px;
+  --s-j: 18px;
   --s-b: 16px;
   --s-s: 12px;
   --s-xs: 8px;
@@ -44,16 +44,16 @@
 
   // COLORS
   --color-primary: #3cbcb4;
-  --color-background-global:  #FFFFFF;
+  --color-background-global: #ffffff;
   --color-grey: #f1f1f1;
   --color-grey-400: rgba(74, 86, 98, 0.4);
   --color-grey-600: #4a5662;
   --color-neutral-gray: #404555;
-  
+  --color-white: #ffffff;
+
   // BOX-SHADOW
   --toast-box-shadow: -1px -1px 3px #ffffff, 1.5px 1.5px 3px rgba(174, 174, 192, 0.4);
   --transition-all: all 0.1s ease-out;
-
 
   // FILTERS
   --filter-grey-svg: invert(33%) sepia(10%) saturate(16%) hue-rotate(321deg) brightness(89%) contrast(94%);
