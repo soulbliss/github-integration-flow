@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
+:root {
+  // SPACING
+  --s-xxxl: 128px;
+  --s-xxl: 64px;
+  --s-xl: 48px;
+  --s-l: 32px;
+  --s-m: 24px;
+  --s-b: 16px;
+  --s-s: 12px;
+  --s-xs: 8px;
+  --s-xxs: 6px;
+
+  --scrollbar-width: 8px;
+
+  // TYPOGRAPHY
+  --main-font: "Poppins";
+  --line-height-text: 1.5;
+  --line-height-heading: 1.2;
+  --line-height-min: 1;
+
+  --fs-xxxl: 64px;
+  --fs-xxl: 56px;
+  --fs-xl: 48px;
+  --fs-l: 36px;
+  --fs-m: 32px;
+  --fs-k: 24px;
+  --fs-d: 20px;
+  --fs-n: 18px;
+  --fs-b: 16px;
+  --fs-s: 14px;
+  --fs-xs: 12px;
+  --fs-xxs: 10px;
+  --fs-xxs: 10px;
+
+  --gutter: 32px;
+  --body-padding: 32px;
+  --max-content-width: 1344px;
+  --nav-height: 80px;
+  --nav-width: 200px;
+  --nav-height-s: 48px;
+
+  // COLORS
+  --color-primary: #3cbcb4;
+  --color-background-global:  #FFFFFF;
+  --color-grey: #f1f1f1;
+  --color-grey-400: rgba(74, 86, 98, 0.4);
+  --color-grey-600: #4a5662;
+
+  // BOX-SHADOW
+  --toast-box-shadow: -1px -1px 3px #ffffff, 1.5px 1.5px 3px rgba(174, 174, 192, 0.4);
+  --transition-all: all 0.1s ease-out;
+
+
+  // FILTERS
+  --filter-grey-svg: invert(33%) sepia(10%) saturate(16%) hue-rotate(321deg) brightness(89%) contrast(94%);
+  --filter-blue-tint: invert(42%) sepia(85%) saturate(1705%) hue-rotate(182deg) brightness(85%) contrast(89%);
+}
