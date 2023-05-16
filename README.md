@@ -5,9 +5,9 @@
 ## Checklist
 
 - [ ] Web app 
-  - [ ] Login
+  - [ ] Login (mobille look design)
     - [ ] 
-  - [ ] Registration
+  - [ ] Registration (desktop only)
     - [ ] Email verification
 - [ ] Mobile app flows for the above
 

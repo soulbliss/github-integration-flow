@@ -42,6 +42,16 @@
     color: var(--color-neutral-charcoal) !important;
     opacity: 1 !important; /* Firefox */
   }
+  .action-item {
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: right;
+    color: #2558e5;
+    margin-bottom: 24px;
+  }
   .ant-form-item-explain-error {
     font-family: var(--main-font);
     font-style: normal;
