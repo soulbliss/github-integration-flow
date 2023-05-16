@@ -2,3 +2,22 @@ body {
   margin: 0;
   background-color: var(--color-background-global);
 }
+
+.button {
+  border-radius: 4px;
+  width: -webkit-fill-available;
+  background-color: var(--color-primary-4);
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span {
+    margin: 11px 0 11px 0;
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 600;
+    font-size: var(--fs-n);
+    line-height: 26px;
+    color: var(--color-neutral-black);
+  }
+}

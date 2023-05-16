@@ -1,5 +1,6 @@
 import React from "react";
 import SidePanel from "../sidePanel/SidePanel";
+import SignUpForm from "./SignUpForm";
 import { Col, Row } from "antd";
 import "./SignUpPage.scss";
 const SignUpPage = () => {
@@ -10,7 +11,9 @@ const SignUpPage = () => {
           <SidePanel />
         </Col>
         <Col span={15}>
-          <div>I am signUpPage</div>
+          <div className="form-holder">
+            <SignUpForm />
+          </div>
         </Col>
       </Row>
     </div>

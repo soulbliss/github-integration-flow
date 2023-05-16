@@ -1,0 +1,54 @@
+.sign-up-form {
+  margin: auto;
+  .title {
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--fs-k);
+    line-height: var(--s-l);
+    color: var(--color-neutral-black);
+    margin-bottom: var(--s-s);
+  }
+  .sub-title {
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--fs-b);
+    line-height: var(--s-m);
+    color: var(--color-neutral-gray);
+    margin-bottom: var(--s-m);
+    .link {
+      font-weight: 600;
+    }
+  }
+  .ant-form-item-control-input-content {
+    input {
+      font-family: var(--main-font);
+    }
+  }
+  .info-text {
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--fs-xs);
+    line-height: var(--s-j);
+    color: var(--color-neutral-gray);
+    margin-bottom: var(--s-b);
+    :last-child {
+      margin-bottom: var(--s-m);
+    }
+  }
+  ::placeholder {
+    color: var(--color-neutral-charcoal) !important;
+    opacity: 1 !important; /* Firefox */
+  }
+  .ant-form-item-explain-error {
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--fs-s);
+    line-height: 22px;
+    color: var(--color-system-danger-4);
+    margin-bottom: var(--s-b);
+  }
+}
