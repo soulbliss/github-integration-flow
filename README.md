@@ -15,7 +15,7 @@ The mobile interface
 
 ## Project contains
 
-1. Mongo DB, React, Express and JavaScript used (MERN)
+1. Mongo DB, React, Express and JavaScript used (MERN) stack
 2. JWT based authentication using Passport JS, persisting the sessions in mongoDB
 3. Fully functional User registration, Email verification flow, login and logout.
 4. Fully responsive Desktop and mobile screens
@@ -57,10 +57,7 @@ Before running the further steps, make sure you have a local mongo instance runn
 
 
 
-### Keep in mind
-
+### Thins kept in mind
 1. Code style, quality, modularity, coherent commits, and clean commit messages
-2. How do you clarify things that are open-ended
-3. How do you design APIs
-4. Attention to detail
-5. Matching the design accuracy
+2. Attention to detail
+3. Matching the design accuracy
