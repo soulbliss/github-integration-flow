@@ -3,7 +3,7 @@ import { Button, Form, Input } from "antd";
 import { login } from "../../../src/api/authApi";
 import { notification } from "antd";
 import { Link } from "react-router-dom";
-import { CheckSuccessIcon, CloseIcon , EyeOutlined, EyeInvisibleOutlined,} from "../icons/Icons";
+import { CheckSuccessIcon, CloseIcon, EyeOutlined, EyeInvisibleOutlined } from "../icons/Icons";
 
 /* eslint-disable no-template-curly-in-string */
 const validateMessages = {
@@ -17,9 +17,10 @@ const validateMessages = {
   }
 };
 /* eslint-enable no-template-curly-in-string */
+let defaultErrorValues = { field: "" };
 const SignInForm = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
-  const [error, setError] = useState({ field: "" });
+  const [error, setError] = useState(defaultErrorValues);
   const [notificationApi, contextHolder] = notification.useNotification();
 
   const openNotification = placement => {
@@ -34,6 +35,7 @@ const SignInForm = () => {
     login(values)
       .then(response => {
         if (response.user.email) {
+          setError(defaultErrorValues);
           openNotification("topRight");
         }
       })
@@ -63,7 +65,7 @@ const SignInForm = () => {
           maxWidth: 600
         }}
         validateMessages={validateMessages}>
-        <div>
+        <div className="ant-form-items">
           <Form.Item
             name="email"
             rules={[
@@ -85,7 +87,7 @@ const SignInForm = () => {
             ]}
             validateStatus={error.field === "password" ? "error" : ""}
             help={error.field === "password" ? error.message : ""}>
-           <Input.Password
+            <Input.Password
               iconRender={visible =>
                 visible ? (
                   <div onClick={() => setPasswordVisible(prevState => !prevState)}>

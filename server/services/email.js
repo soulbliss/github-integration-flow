@@ -9,7 +9,7 @@ const canSendEmail = () => {
 module.exports = {
   sendEmail: function (config) {
     if (canSendEmail()) {
-      let { to, from, subject, text, html, senderName = "Developer Assignment" } = config;
+      let { to, from, subject, text, html, senderName = "Software Engineer Challenge" } = config;
       let emailConfig = { subject, to, sender: { email: from, name: senderName }, htmlContent: html, textContent: text };
       logger.info("Sending email through send in blue");
       return new SibApiV3Sdk.TransactionalEmailsApi().sendTransacEmail(emailConfig).then(
@@ -31,7 +31,7 @@ module.exports = {
       }
     ];
     let from = "deepak.garasangi@gmail.com";
-    let subject = "Verification email for assignment";
+    let subject = "Verification Email Assignment";
     this.sendEmail({ to, from, subject, html });
   },
   connect: function () {
