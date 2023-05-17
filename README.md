@@ -3,13 +3,13 @@
 Implementaion of assignment for a Bangalore based startup using
 MERN (stack).
 
-![Web](/media/disk-e/Projects/wisdomCircle/img/Web.png)
+![Web](./img/Web.png)
 
 The web interface
 
 
 
-![Mobile](/media/disk-e/Projects/wisdomCircle/img/Mobile.png)
+![Mobile](./img/Mobile.png)
 
 The mobile interface
 
