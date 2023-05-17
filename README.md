@@ -57,7 +57,7 @@ Before running the further steps, make sure you have a local mongo instance runn
 
 
 
-### Thins kept in mind
+### Things kept in mind
 1. Code style, quality, modularity, coherent commits, and clean commit messages
 2. Attention to detail
 3. Matching the design accuracy
