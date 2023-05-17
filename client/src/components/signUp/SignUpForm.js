@@ -1,5 +1,7 @@
 import "./SignUpForm.scss";
 import { Button, Form, Input, Select } from "antd";
+import { register as SignUpUser } from "../../../src/api/authApi";
+
 import { Link } from "react-router-dom";
 const { Option } = Select;
 
@@ -18,6 +20,7 @@ const validateMessages = {
 
 const onFinish = values => {
   console.log(values);
+  SignUpUser(values);
 };
 const SignUpForm = () => {
   const prefixSelector = (

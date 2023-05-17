@@ -1,5 +1,5 @@
 import * as authApi from "../api/authApi";
-import { history } from "./history";
+import { history } from "../_helpers/history";
 
 let Utils = {
   handleResponse: response => {

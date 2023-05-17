@@ -7,7 +7,7 @@ export function login(user) {
     body: JSON.stringify(user)
   };
   localStorage.removeItem("user");
-  return fetch("/session/login", requestOptions)
+  return fetch("api/session/login", requestOptions)
     .then(Utils.handleResponse)
     .then(response => {
       let user = Utils.addExpiryToUserSession({ user: response.user, expireInDays: 14 });
@@ -21,7 +21,7 @@ export function logout() {
     headers: { "Content-Type": "application/json" }
   };
   localStorage.removeItem("user");
-  return fetch("/session/logout", requestOptions).then(Utils.handleResponse);
+  return fetch("api/session/logout", requestOptions).then(Utils.handleResponse);
 }
 
 export function register(user) {
