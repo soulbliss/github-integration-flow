@@ -1,21 +1,12 @@
 import React from "react";
-import SidePanel from "../sidePanel/SidePanel";
-import SignInForm from "./SignInForm";
-import { Col, Row } from "antd";
+import Utils from "../../_helpers/Utils";
+import SignInPageDesktopLayout from "./SignInPageDesktopLayout";
+import SignInPageMobileLayout from "./SignInPageMobileLayout";
 import "../signUp/SignUpPage.scss";
 const SignInPage = () => {
   return (
     <div className="sign-up-page">
-      <Row className="sign-up-page-wrapper">
-        <Col className="side-panel-holder" span={9}>
-          <SidePanel />
-        </Col>
-        <Col span={15}>
-          <div className="form-holder">
-            <SignInForm />
-          </div>
-        </Col>
-      </Row>
+      {Utils.isMobile() ? <SignInPageMobileLayout /> : <SignInPageDesktopLayout />}
     </div>
   );
 };

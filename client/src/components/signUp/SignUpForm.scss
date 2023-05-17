@@ -1,5 +1,7 @@
 .sign-up-form {
   margin: auto;
+  @media (max-width: 768px) {
+  }
   .title {
     font-family: var(--main-font);
     font-style: normal;
@@ -26,6 +28,7 @@
       font-family: var(--main-font);
     }
   }
+
   .info-text {
     font-family: var(--main-font);
     font-style: normal;
