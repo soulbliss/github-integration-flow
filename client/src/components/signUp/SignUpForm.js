@@ -99,7 +99,7 @@ const SignUpForm = () => {
           <Input placeholder="Email Address" />
         </Form.Item>
         <Form.Item
-          name="phone"
+          name="phoneNo"
           rules={[
             {
               required: true,
