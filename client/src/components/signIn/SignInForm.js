@@ -3,6 +3,7 @@ import { Button, Form, Input } from "antd";
 import { login } from "../../../src/api/authApi";
 import { notification } from "antd";
 import { Link } from "react-router-dom";
+import { CheckSuccessIcon, CloseIcon } from "../icons/Icons";
 
 /* eslint-disable no-template-curly-in-string */
 const validateMessages = {
@@ -23,7 +24,9 @@ const SignInForm = () => {
   const openNotification = placement => {
     notificationApi.success({
       message: `You are successfully logged in`,
-      placement
+      placement,
+      closeIcon: <CloseIcon />,
+      icon: <CheckSuccessIcon />
     });
   };
   const onFinish = values => {
@@ -65,7 +68,7 @@ const SignInForm = () => {
               type: "email"
             }
           ]}
-          validateStatus={error.field === "email" ? "error": ""}
+          validateStatus={error.field === "email" ? "error" : ""}
           help={error.field === "email" ? error.message : ""}>
           <Input placeholder="Email or Mobile Number" />
         </Form.Item>
@@ -77,7 +80,7 @@ const SignInForm = () => {
               message: "Please input your password!"
             }
           ]}
-          validateStatus={error.field === "password" ? "error": ""}
+          validateStatus={error.field === "password" ? "error" : ""}
           help={error.field === "password" ? error.message : ""}>
           <Input.Password placeholder="Password" />
         </Form.Item>
