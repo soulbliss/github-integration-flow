@@ -54,6 +54,7 @@ const SignInForm = () => {
       <Form
         name="nest-messages"
         onFinish={onFinish}
+        className="sign-in-form"
         initialValues={{
           prefix: "91"
         }}
@@ -61,32 +62,34 @@ const SignInForm = () => {
           maxWidth: 600
         }}
         validateMessages={validateMessages}>
-        <Form.Item
-          name="email"
-          rules={[
-            {
-              type: "email"
-            }
-          ]}
-          validateStatus={error.field === "email" ? "error" : ""}
-          help={error.field === "email" ? error.message : ""}>
-          <Input placeholder="Email or Mobile Number" />
-        </Form.Item>
-        <Form.Item
-          name="password"
-          rules={[
-            {
-              required: true,
-              message: "Please input your password!"
-            }
-          ]}
-          validateStatus={error.field === "password" ? "error" : ""}
-          help={error.field === "password" ? error.message : ""}>
-          <Input.Password placeholder="Password" />
-        </Form.Item>
-        <div className="action-item">Forgot Password</div>
+        <div>
+          <Form.Item
+            name="email"
+            rules={[
+              {
+                type: "email"
+              }
+            ]}
+            validateStatus={error.field === "email" ? "error" : ""}
+            help={error.field === "email" ? error.message : ""}>
+            <Input placeholder="Email or Mobile Number" />
+          </Form.Item>
+          <Form.Item
+            name="password"
+            rules={[
+              {
+                required: true,
+                message: "Please input your password!"
+              }
+            ]}
+            validateStatus={error.field === "password" ? "error" : ""}
+            help={error.field === "password" ? error.message : ""}>
+            <Input.Password placeholder="Password" />
+          </Form.Item>
+          <div className="action-item">Forgot Password</div>
+        </div>
         <Form.Item>
-          <Button className="button" type="primary" htmlType="submit">
+          <Button className="button absolute" type="primary" htmlType="submit">
             Sign In
           </Button>
         </Form.Item>

@@ -1,17 +1,17 @@
 import React from "react";
-import { Col } from "antd";
 import TopPanel from "../topPanel/TopPanel";
 import SignInForm from "./SignInForm";
+import "./SignInPageMobileLayout.scss";
 
 const SignInPageMobileLayout = () => {
   return (
     <div className="sign-up-page-wrapper">
-      <Col className="side-panel-holder" span={24}>
+      <div className="side-panel-holder">
         <TopPanel />
-      </Col>
-      <Col className="side-panel-holder" offset={1} span={20}>
-      <SignInForm />
-       </Col>
+      </div>
+      <div className="sign-in-form-mobile">
+        <SignInForm />
+      </div>
     </div>
   );
 };
