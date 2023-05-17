@@ -1,6 +1,6 @@
 import Utils from "../_helpers/Utils";
 
-export function login(user) {
+export async function login(user) {
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -24,7 +24,26 @@ export function logout() {
   return fetch("api/session/logout", requestOptions).then(Utils.handleResponse);
 }
 
-export function register(user) {
+export async function verifyEmail({ userId, token }) {
+  const requestOptions = {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ userId, token }),
+    redirect: "manual"
+  };
+  return fetch("/api/user/verify_email", requestOptions)
+    .then(Utils.handleResponse)
+    .then(response => {
+      if (response.success) {
+        return response.redirectUrl;
+      }
+    })
+    .catch(error => {
+      console.error("Error fetching redirect URL:", error);
+    });
+}
+
+export async function register(user) {
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
