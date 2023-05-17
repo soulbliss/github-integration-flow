@@ -3,7 +3,7 @@ import { Button, Form, Input } from "antd";
 import { login } from "../../../src/api/authApi";
 import { notification } from "antd";
 import { Link } from "react-router-dom";
-import { CheckSuccessIcon, CloseIcon } from "../icons/Icons";
+import { CheckSuccessIcon, CloseIcon , EyeOutlined, EyeInvisibleOutlined,} from "../icons/Icons";
 
 /* eslint-disable no-template-curly-in-string */
 const validateMessages = {
@@ -18,6 +18,7 @@ const validateMessages = {
 };
 /* eslint-enable no-template-curly-in-string */
 const SignInForm = () => {
+  const [passwordVisible, setPasswordVisible] = useState(false);
   const [error, setError] = useState({ field: "" });
   const [notificationApi, contextHolder] = notification.useNotification();
 
@@ -84,7 +85,24 @@ const SignInForm = () => {
             ]}
             validateStatus={error.field === "password" ? "error" : ""}
             help={error.field === "password" ? error.message : ""}>
-            <Input.Password placeholder="Password" />
+           <Input.Password
+              iconRender={visible =>
+                visible ? (
+                  <div onClick={() => setPasswordVisible(prevState => !prevState)}>
+                    <EyeOutlined />
+                  </div>
+                ) : (
+                  <div onClick={() => setPasswordVisible(prevState => !prevState)}>
+                    <EyeInvisibleOutlined />
+                  </div>
+                )
+              }
+              visibilityToggle={{
+                visible: passwordVisible,
+                onVisibleChange: setPasswordVisible
+              }}
+              placeholder="Password"
+            />
           </Form.Item>
           <div className="action-item">Forgot Password</div>
         </div>

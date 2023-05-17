@@ -4,6 +4,7 @@ import { Button, Form, Input, Select } from "antd";
 import { register as SignUpUser } from "../../../src/api/authApi";
 import VerificationModal from "./VerificationModal";
 import { Link } from "react-router-dom";
+import { EyeOutlined, EyeInvisibleOutlined, IndianFlagIcon } from "../icons/Icons";
 const { Option } = Select;
 
 /* eslint-disable no-template-curly-in-string */
@@ -21,7 +22,7 @@ const validateMessages = {
 
 const SignUpForm = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const [passwordVisible, setPasswordVisible] = useState(false);
   const handleOk = () => {
     setIsModalOpen(false);
   };
@@ -42,7 +43,9 @@ const SignUpForm = () => {
         style={{
           width: 88
         }}>
-        <Option value="91">+91</Option>
+        <Option value="91">
+          <IndianFlagIcon />
+        </Option>
         <Option value="01">+01</Option>
       </Select>
     </Form.Item>
@@ -67,67 +70,86 @@ const SignUpForm = () => {
           maxWidth: 600
         }}
         validateMessages={validateMessages}>
-        <Form.Item
-          name="firstName"
-          placeholder="Please input"
-          rules={[
-            {
-              required: true
-            }
-          ]}>
-          <Input placeholder="First Name" />
-        </Form.Item>
+        <div>
+          <Form.Item
+            name="firstName"
+            placeholder="Please input"
+            rules={[
+              {
+                required: true
+              }
+            ]}>
+            <Input placeholder="First Name" />
+          </Form.Item>
 
-        <Form.Item
-          name="lastName"
-          placeholder="Please input"
-          rules={[
-            {
-              required: true
-            }
-          ]}>
-          <Input placeholder="Last Name" />
-        </Form.Item>
+          <Form.Item
+            name="lastName"
+            placeholder="Please input"
+            rules={[
+              {
+                required: true
+              }
+            ]}>
+            <Input placeholder="Last Name" />
+          </Form.Item>
 
-        <Form.Item
-          name="email"
-          rules={[
-            {
-              type: "email"
-            }
-          ]}>
-          <Input placeholder="Email Address" />
-        </Form.Item>
-        <Form.Item
-          name="phoneNo"
-          rules={[
-            {
-              required: true,
-              message: "Please input your phone number!"
-            }
-          ]}>
-          <Input
-            addonBefore={prefixSelector}
-            placeholder="Mobile Number"
-            style={{
-              width: "100%"
-            }}
-          />
-        </Form.Item>
-        <Form.Item
-          name="password"
-          rules={[
-            {
-              required: true,
-              message: "Please input your password!"
-            }
-          ]}>
-          <Input.Password placeholder="Password" />
-        </Form.Item>
-        <div className="info-text">Password must be at least 8 characters</div>
-        <div className="info-text">
-          By clicking Sign Up you are indicating that you have read and acknowledged the <Link to="#">Terms of Service</Link> and{" "}
-          <Link to="#">Privacy Notice</Link>
+          <Form.Item
+            name="email"
+            rules={[
+              {
+                type: "email"
+              }
+            ]}>
+            <Input placeholder="Email Address" />
+          </Form.Item>
+          <Form.Item
+            name="phoneNo"
+            rules={[
+              {
+                required: true,
+                message: "Please input your phone number!"
+              }
+            ]}>
+            <Input
+              addonBefore={prefixSelector}
+              placeholder="Mobile Number"
+              style={{
+                width: "100%"
+              }}
+            />
+          </Form.Item>
+          <Form.Item
+            name="password"
+            rules={[
+              {
+                required: true,
+                message: "Please input your password!"
+              }
+            ]}>
+            <Input.Password
+              iconRender={visible =>
+                visible ? (
+                  <div onClick={() => setPasswordVisible(prevState => !prevState)}>
+                    <EyeOutlined />
+                  </div>
+                ) : (
+                  <div onClick={() => setPasswordVisible(prevState => !prevState)}>
+                    <EyeInvisibleOutlined />
+                  </div>
+                )
+              }
+              visibilityToggle={{
+                visible: passwordVisible,
+                onVisibleChange: setPasswordVisible
+              }}
+              placeholder="Password"
+            />
+          </Form.Item>
+          <div className="info-text">Password must be at least 8 characters</div>
+          <div className="info-text">
+            By clicking Sign Up you are indicating that you have read and acknowledged the <Link to="#">Terms of Service</Link> and{" "}
+            <Link to="#">Privacy Notice</Link>
+          </div>
         </div>
         <Form.Item>
           <Button className="button" type="primary" htmlType="submit">
