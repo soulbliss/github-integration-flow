@@ -25,3 +25,16 @@ body {
 .ant-notification-notice {
   border-left: 4px solid green;
 }
+
+.ant-select-selection-item {
+  display: flex;
+  align-items: center;
+  place-content: center;
+}
+
+.ant-input-password-icon {
+  display: flex;
+  :hover {
+    cursor: pointer;
+  }
+}
