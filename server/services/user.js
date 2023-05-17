@@ -27,11 +27,9 @@ let UserService = {
     try {
       await user.save();
       let tokenData = await this.generateVerificationToken({ userId: user._id, type: "CONFIRM_EMAIL", days: 2 });
-      console.log(`user id :${user._id}, token:${tokenData.token}`);
       if (!tokenData.success) {
         throw tokenData.message;
       }
-      console.log(user);
       this.sendEmailVerificationToken({ user, token: tokenData.token });
       return {
         status: 200,
