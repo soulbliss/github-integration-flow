@@ -1,7 +1,8 @@
 import "./SignUpForm.scss";
+import { useState } from "react";
 import { Button, Form, Input, Select } from "antd";
 import { register as SignUpUser } from "../../../src/api/authApi";
-
+import VerificationModal from "./VerificationModal";
 import { Link } from "react-router-dom";
 const { Option } = Select;
 
@@ -18,11 +19,23 @@ const validateMessages = {
 };
 /* eslint-enable no-template-curly-in-string */
 
-const onFinish = values => {
-  console.log(values);
-  SignUpUser(values);
-};
 const SignUpForm = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+  const onFormSubmit = async values => {
+    values = { ...values, name: values.firstName + " " + values.lastName };
+    SignUpUser(values).then(data => {
+      if (data.status === 200) {
+        setIsModalOpen(true);
+      }
+    });
+  };
   const prefixSelector = (
     <Form.Item name="prefix" noStyle>
       <Select
@@ -46,7 +59,7 @@ const SignUpForm = () => {
       </div>
       <Form
         name="nest-messages"
-        onFinish={onFinish}
+        onFinish={onFormSubmit}
         initialValues={{
           prefix: "91"
         }}
@@ -122,6 +135,7 @@ const SignUpForm = () => {
           </Button>
         </Form.Item>
       </Form>
+      <VerificationModal handleOk={handleOk} isModalOpen={isModalOpen} handleCancel={handleCancel} />
     </div>
   );
 };
