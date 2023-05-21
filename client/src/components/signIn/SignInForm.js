@@ -46,11 +46,10 @@ const SignInForm = () => {
   return (
     <div className="sign-up-form">
       {contextHolder}
-      <div className="title">Sign In to WisdomCircle</div>
+      <div className="title">Sign In to Humalect</div>
       <div className="sub-title">
         Don't have an account?{" "}
         <span className="link">
-          {" "}
           <Link to="/signup">Sign up</Link>
         </span>
       </div>
