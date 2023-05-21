@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Form, Input } from "antd";
 import { login } from "../../../src/api/authApi";
 import { notification } from "antd";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { CheckSuccessIcon, CloseIcon, EyeOutlined, EyeInvisibleOutlined } from "../icons/Icons";
 
 /* eslint-disable no-template-curly-in-string */
@@ -22,6 +22,7 @@ const SignInForm = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [error, setError] = useState(defaultErrorValues);
   const [notificationApi, contextHolder] = notification.useNotification();
+  const navigate = useNavigate();
 
   const openNotification = placement => {
     notificationApi.success({
@@ -37,6 +38,7 @@ const SignInForm = () => {
         if (response.user.email) {
           setError(defaultErrorValues);
           openNotification("topRight");
+          navigate("/dashboard");
         }
       })
       .catch(({ errors }) => {
@@ -74,7 +76,7 @@ const SignInForm = () => {
             ]}
             validateStatus={error.field === "email" ? "error" : ""}
             help={error.field === "email" ? error.message : ""}>
-            <Input placeholder="Email or Mobile Number" />
+            <Input placeholder="Email" />
           </Form.Item>
           <Form.Item
             name="password"

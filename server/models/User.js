@@ -20,7 +20,10 @@ const UserSchema = new Schema(
       type: String,
       required: [true, "Name is mandatory"]
     },
-    phoneNo: String
+    organization: {
+      type: String,
+      required: [true, "Organization is mandatory"]
+    },
   },
   {
     timestamps: {
