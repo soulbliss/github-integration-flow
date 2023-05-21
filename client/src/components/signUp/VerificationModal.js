@@ -14,8 +14,8 @@ const VerificationModal = ({ isModalOpen, handleCancel, handleOk }) => {
         onCancel={handleCancel}>
         <p>
           <Divider />
-          Please verify your account. We have sent an email to arkomaini@gmail.com. If you are unable to find the verification email please contact us
-          at: +91-9380644532
+          Please verify your account. We have sent an email to your registered email address. If you are unable to find the verification email please
+          contact us.
         </p>
       </Modal>
     </>

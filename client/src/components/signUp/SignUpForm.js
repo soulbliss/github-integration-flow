@@ -1,11 +1,10 @@
 import "./SignUpForm.scss";
 import { useState } from "react";
-import { Button, Form, Input, Select } from "antd";
+import { Button, Form, Input } from "antd";
 import { register as SignUpUser } from "../../../src/api/authApi";
 import VerificationModal from "./VerificationModal";
 import { Link } from "react-router-dom";
 import { EyeOutlined, EyeInvisibleOutlined } from "../icons/Icons";
-const { Option } = Select;
 
 /* eslint-disable no-template-curly-in-string */
 const validateMessages = {
