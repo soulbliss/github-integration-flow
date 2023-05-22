@@ -1,7 +1,6 @@
 # About
 
-Implementaion of assignment for a Bangalore based startup using
-MERN (stack).
+Implementaion of assignment for github API integration using MERN (stack).
 
 ![Web](./img/Web.png)
 
@@ -18,8 +17,7 @@ The Github integration
 1. Mongo DB, React, Express and JavaScript used (MERN) stack
 2. JWT based authentication using Passport JS, persisting the sessions in mongoDB
 3. Fully functional User registration, Email verification flow, login and logout.
-4. Fully responsive Desktop and mobile screens
-
+4. Github OAuth flow, Github webhooks based functionality, persists to store.
 
 
 # Installation
