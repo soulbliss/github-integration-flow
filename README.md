@@ -7,10 +7,11 @@ Implementaion of assignment for github API integration using MERN (stack).
 The web interface
 
 
-
 ![Mobile](./img/Github.png)
 
 The Github integration
+
+[![Watch the video](./img/walkthrough.mkv)]
 
 ## Project contains
 
