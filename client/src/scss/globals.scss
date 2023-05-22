@@ -38,3 +38,9 @@ body {
     cursor: pointer;
   }
 }
+
+.ant-card {
+  .ant-card-head-title {
+    font-size: var(--fs-b);
+  }
+}

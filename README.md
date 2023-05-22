@@ -9,9 +9,9 @@ The web interface
 
 
 
-![Mobile](./img/Mobile.png)
+![Mobile](./img/Github.png)
 
-The mobile interface
+The Github integration
 
 ## Project contains
 

@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import SignUpPage from "./components/signUp/SignUpPage";
 import SignInPage from "./components/signIn/SignInPage";
 import DashBoard from "./components/dashboard/DashBoard";
+import CallBackPage from "./components/github/CallBackPage";
 import PrivateRoute from "../src/_helpers/PrivateRoute";
 
 import EmailVerificationPage from "./components/emailVerify/EmailVerificationPage";
@@ -21,6 +22,7 @@ function App() {
             <Route path="/dashboard" element={<DashBoard />} />
           </Route>
           <Route path="verify-email" element={<EmailVerificationPage />} />
+          <Route path="callback" element={<CallBackPage />} />
         </Route>
       </Routes>
     </div>

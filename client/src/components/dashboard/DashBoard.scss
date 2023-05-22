@@ -1,0 +1,42 @@
+.dashboard {
+  height: 100vh;
+  .sider {
+    text-align: "center";
+    color: "#fff";
+    background-color: "#3ba0e9";
+  }
+  .content {
+    text-align: "center";
+    min-height: 120;
+    color: "#fff";
+    background-color: "#108ee9";
+    margin-left: var(--s-xl);
+    .content-wrapper {
+      .cards {
+        margin-top: var(--s-xxl);
+        .card {
+          text-align-last: center;
+        }
+      }
+      .title {
+        font-family: var(--main-font);
+        font-style: normal;
+        font-weight: 700;
+        font-size: var(--fs-l);
+        line-height: var(--s-l);
+        color: var(--color-neutral-black);
+        margin-bottom: var(--s-s);
+      }
+    }
+  }
+  .ant-layout-sider-children {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .sign-out {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+}
