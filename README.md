@@ -11,8 +11,6 @@ The web interface
 
 The Github integration
 
-[![Watch the video](./img/walkthrough.mkv)]
-
 ## Project contains
 
 1. Mongo DB, React, Express and JavaScript used (MERN) stack
